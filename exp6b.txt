@@ -33,6 +33,11 @@ for i = 1:l
     % Limit delta within the specified range
     delta = max(delta_min, min(delta, delta_max));
 end
+stairs(xn, 'b')
+
+legend('Analog Signal', 'ADM')
+title('ADAPTIVE DELTA MODULATION')
+
 
 
 
@@ -103,7 +108,3 @@ function [ADMout] = adeltamod(sig_in, Delta, td, ts)
 end
 
 
-stairs(xn, 'b')
-
-legend('Analog Signal', 'ADM')
-title('ADAPTIVE DELTA MODULATION')
